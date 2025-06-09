@@ -1,5 +1,5 @@
 {
-  "name": "moises-extension-boilerplate",
+  "name": "@moises.ai/extension-boilerplate",
   "version": "0.1.0",
   "description": "Boilerplate for creating Moises Extensions with Next.js and Moises Design System",
   "private": true,

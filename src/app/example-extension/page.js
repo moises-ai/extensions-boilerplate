@@ -80,10 +80,6 @@ export default function Page() {
         moises.ui.open();
       }
     );
-
-    // return () => {
-    //   document.removeEventListener("keydown", keyHandler);
-    // };
   }, [isConnected, moises]);
 
   return (

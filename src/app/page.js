@@ -9,7 +9,6 @@ import {
   Tabs,
 } from "@moises.ai/design-system";
 import {
-  PlusIcon,
   ExternalLinkIcon,
   ArrowRightIcon,
 } from "@moises.ai/design-system/icons";
@@ -99,12 +98,12 @@ export default function Home() {
 
                 <Flex justify="end" mt="2">
                   <Button
-                    as="a"
-                    href="https://design-system.moises.ai/?path=/docs/introduction--docs"
-                    target="_blank"
                     variant="soft"
                     color="cyan"
                     size="2"
+                    onClick={() => {
+                      window.open("https://extensions.moises.ai/", "_blank");
+                    }}
                   >
                     <Flex gap="1" align="center">
                       View Full Documentation <ExternalLinkIcon />

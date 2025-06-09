@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import {
-  Box,
   Text,
   Card,
   Heading,
@@ -33,6 +32,11 @@ export default function ExampleForm({ moises }) {
     //  Example of an extension action
     setIsLoading(true);
     setMessage("");
+
+    moises.ui.alert({
+      title: "Hello",
+      description: "Hello from the extension",
+    });
 
     try {
       // Simulate API call or action

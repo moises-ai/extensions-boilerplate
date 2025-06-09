@@ -1,4 +1,4 @@
-# Moises Extensions Boilerplate
+# Extensions Boilerplate
 
 A starter template for building Moises Extensions using Next.js and the official Moises Design System.
 
@@ -22,7 +22,7 @@ npx create-moises-extension my-extension
 Or clone and install manually:
 
 ```bash
-git clone https://github.com/moises-ai/boilerplate-moises-extensions.git my-extension
+git clone https://github.com/moises-ai/extensions-boilerplate.git my-extension
 cd my-extension
 npm install
 ```
@@ -81,7 +81,12 @@ export default function YourExtension() {
 This boilerplate includes the official Moises Design System. To learn more about available components and styling options:
 
 - [Design System Documentation](https://design-system.moises.ai/?path=/docs/introduction--docs)
-- [Component Examples](https://design-system.moises.ai/?path=/docs/components-button--docs)
+
+## Moises Extensions Documentation
+
+To learn more about Moises Extensions, capabilities, and integration guides:
+
+- [Moises Extensions Documentation](https://extensions.moises.ai/)
 
 ## Deployment
 
