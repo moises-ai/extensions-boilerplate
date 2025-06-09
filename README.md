@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Moises Extensions Boilerplate
 
-## Getting Started
+A starter template for building Moises Extensions using Next.js and the official Moises Design System.
 
-First, run the development server:
+## Features
+
+- Built with [Next.js](https://nextjs.org) for a modern React framework
+- Integrated [Moises Design System](https://design-system.moises.ai/?path=/docs/introduction--docs) components
+- Moises Extensions   for building powerful Moises platform extensions
+- Example extension showcasing   capabilities
+- Optimized for quick development and easy customization
+- Responsive layout with proper styling
+
+## Quick Start
+
+You can create a new project based on this boilerplate using:
+
+```bash
+npx create-moises-extension my-extension
+```
+
+Or clone and install manually:
+
+```bash
+git clone https://github.com/moises-ai/boilerplate-moises-extensions.git my-extension
+cd my-extension
+npm install
+```
+
+## Development
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Creating Moises Extensions
 
-## Learn More
+This boilerplate includes a generic example extension that demonstrates the capabilities of the Moises Extensions  .
 
-To learn more about Next.js, take a look at the following resources:
+To create your own extension:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Create a new directory under `src/app/` for your extension (e.g., `src/app/my-extension/`)
+2. Create a page.js file with your extension code, using the Extension  :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```jsx
+'use client';
 
-## Deploy on Vercel
+import { initMoisesExtension } from '@moises.ai/extension';
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+// Initialize your extension
+const useMoisesExtension = initMoisesExtension({
+  id: 'your-extension-id',
+  name: 'Your Extension Name',
+  description: 'Description of your extension',
+  icon: '🔌', // Emoji or icon for your extension
+  author: 'Your Name',
+  version: '1.0.0',
+});
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+export default function YourExtension() {
+  const { moises, isConnected } = useMoisesExtension();
+  
+  // Your extension logic goes here
+  
+  return (
+    // Your extension UI
+  );
+}
+```
+
+3. Check the example extension at `src/app/example-extension/` for more implementation details.
+
+## Moises Design System
+
+This boilerplate includes the official Moises Design System. To learn more about available components and styling options:
+
+- [Design System Documentation](https://design-system.moises.ai/?path=/docs/introduction--docs)
+- [Component Examples](https://design-system.moises.ai/?path=/docs/components-button--docs)
+
+## Deployment
+
+You can deploy your extension as a standalone application or integrate it with the Moises platform.
+
+For standalone deployment, follow Next.js deployment guides:
+- [Next.js Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying)
+
+## License
+
+MIT

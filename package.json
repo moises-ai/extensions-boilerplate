@@ -1,6 +1,7 @@
 {
-  "name": "boilerplate-moises-extensions",
+  "name": "moises-extension-boilerplate",
   "version": "0.1.0",
+  "description": "Boilerplate for creating Moises Extensions with Next.js and Moises Design System",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -9,8 +10,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@moises.ai/design-system": "^2.0.38",
+    "@moises.ai/extension": "^0.0.17",
+    "next": "15.3.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.3"
-  }
+    "react-dom": "^19.0.0"
+  },
+  "keywords": [
+    "moises",
+    "extension",
+    "boilerplate",
+    "nextjs",
+    "design-system"
+  ],
+  "author": "Moises.ai",
+  "license": "MIT"
 }
