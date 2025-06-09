@@ -10,7 +10,6 @@ import {
   Select,
   Flex,
   Switch,
-  TextArea,
 } from "@moises.ai/design-system";
 import { PlusIcon } from "@moises.ai/design-system/icons";
 
@@ -31,56 +30,44 @@ export default function ExampleForm({ moises }) {
   };
 
   const handleSubmit = async () => {
-    // Example of an extension action
-    // setIsLoading(true);
-    // setMessage("");
+    //  Example of an extension action
+    setIsLoading(true);
+    setMessage("");
 
-    // try {
-    //   // Simulate API call or action
-    //   await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // Simulate API call or action
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    //   setMessage("Action completed successfully!");
-    //   console.log("Extension processing:", formData);
-    // } catch (error) {
-    //   setMessage(`Error: ${error.message}`);
-    // } finally {
-    //   setIsLoading(false);
-    // }
+      setMessage("Action completed successfully!");
+      console.log("Extension processing:", formData);
+    } catch (error) {
+      setMessage(`Error: ${error.message}`);
+    } finally {
+      setIsLoading(false);
+    }
 
     console.log("Extension processing:", formData);
   };
 
   return (
     <Card>
-      <Flex direction="column" gap="3" p="3">
+      <Flex direction="column" gap="5" p="3">
         <Heading as="h2" size="3">
           Extension Controls
         </Heading>
 
-        <TextArea
-          title="Name"
-          placeholder="Enter a name"
-          value={formData.name}
-          onChange={(e) => handleChange("name", e.target.value)}
+        <Select
+          title="Options"
+          items={[
+            { value: "option1", label: "Option 1" },
+            { value: "option2", label: "Option 2" },
+            { value: "option3", label: "Option 3" },
+          ]}
+          size="2"
+          onChange={(value) => handleChange("type", value)}
+          defaultValue="option1"
+          variant="soft"
         />
-
-        <Box>
-          <Text as="label" size="2" weight="bold">
-            Type
-          </Text>
-          <Select
-            title="Options"
-            items={[
-              { value: "option1", label: "Option 1" },
-              { value: "option2", label: "Option 2" },
-              { value: "option3", label: "Option 3" },
-            ]}
-            size="2"
-            onChange={(value) => handleChange("type", value)}
-            defaultValue="option1"
-            variant="soft"
-          />
-        </Box>
 
         <Flex align="center" justify="between">
           <Text as="label" size="2" weight="bold">
@@ -94,7 +81,7 @@ export default function ExampleForm({ moises }) {
 
         <Button
           onClick={handleSubmit}
-          disabled={!formData.name}
+          disabled={!formData.enabled}
           loading={isLoading}
           color="cyan"
         >

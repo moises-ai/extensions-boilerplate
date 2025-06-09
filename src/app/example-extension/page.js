@@ -75,7 +75,7 @@ export default function Page() {
     // Add extension to the footer menu
     moises.link(
       "footer:menu",
-      { label: "Example Extension", icon: "MixerHorizontalIcon" },
+      { label: "Example Extension", icon: "UserIcon" },
       () => {
         moises.ui.open();
       }
