@@ -7,8 +7,8 @@ import { useEffect } from "react";
 import ExampleForm from "./form";
 
 const useMoisesExtension = initMoisesExtension({
-  id: "kitchen-sink",
-  name: "Kitchen Sink",
+  id: "ui-kitchen-sink",
+  name: "UI Kitchen Sink",
   description: "A comprehensive example extension for the Moises platform",
   icon: "🔌",
   author: "Moises Systems Inc",
