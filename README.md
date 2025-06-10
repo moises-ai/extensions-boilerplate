@@ -1,22 +1,19 @@
 # Extensions Boilerplate
 
-A starter template for building Moises Extensions using Next.js and the official Moises Design System.
+A starter template for building Moises Extensions using Next.js and Moises Design System.
 
 ## Features
 
 - Built with [Next.js](https://nextjs.org) for a modern React framework
 - Integrated [Moises Design System](https://design-system.moises.ai/?path=/docs/introduction--docs) components
-- Moises Extensions   for building powerful Moises platform extensions
-- Example extension showcasing   capabilities
 - Optimized for quick development and easy customization
-- Responsive layout with proper styling
 
 ## Quick Start
 
 You can create a new project based on this boilerplate using:
 
 ```bash
-npx create-moises-extension my-extension
+npx @moises.ai/extension my-extension
 ```
 
 Or clone and install manually:
@@ -78,7 +75,7 @@ export default function YourExtension() {
 
 ## Moises Design System
 
-This boilerplate includes the official Moises Design System. To learn more about available components and styling options:
+This boilerplate includes the Moises Design System. To learn more about available components and styling options:
 
 - [Design System Documentation](https://design-system.moises.ai/?path=/docs/introduction--docs)
 

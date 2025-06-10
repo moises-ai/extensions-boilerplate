@@ -144,7 +144,7 @@ export default function Home() {
       </Card>
 
       <Text as="p" size="1" color="gray">
-        Get started by editing src/app/page.js
+        Get started by editing src/app/example-extension/page.js
       </Text>
     </Flex>
   );
