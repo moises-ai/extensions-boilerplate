@@ -7,9 +7,9 @@ import { useEffect } from "react";
 import ExampleForm from "./form";
 
 const useMoisesExtension = initMoisesExtension({
-  id: "example-extension",
-  name: "Example Extension",
-  description: "A generic example extension for the Moises platform",
+  id: "kitchen-sink",
+  name: "Kitchen Sink",
+  description: "A comprehensive example extension for the Moises platform",
   icon: "🔌",
   author: "Moises Systems Inc",
   version: "1.0.0",
@@ -75,11 +75,31 @@ export default function Page() {
     // Add extension to the footer menu
     moises.link(
       "footer:menu",
-      { label: "Example Extension", icon: "UserIcon" },
+      { label: "Kitchen Sink", icon: "UserIcon" },
       () => {
         moises.ui.open();
       }
     );
+
+    // Add extension to the track context menu
+    moises.link("track:contextMenu", { label: "Alert Kitchen Sink" }, async ({ trackId }) => {
+      moises.ui.alert({
+        title: "Kitchen Sink",
+        description: "Open the kitchen sink",
+      });
+    });
+
+    moises.link("track:contextMenu", { label: "Open Kitchen Sink" }, async ({ trackId }) => {
+      moises.ui.open()
+    });
+
+    // Add extension to the toolbar
+    moises.link("toolbar:button", { label: "Kitchen Sink", icon: "UserIcon" }, async () => {
+      moises.ui.confirm({
+        title: "Kitchen Sink",
+        description: "Open the kitchen sink",
+      });
+    });
   }, [isConnected, moises]);
 
   return (
@@ -87,9 +107,9 @@ export default function Page() {
       moises={moises}
       height="600px"
       width="480px"
-      title="Example Extension"
+      title="Kitchen Sink"
     >
-      <Flex direction="column" gap="4">
+      <Flex direction="column">
         <ExampleForm moises={moises} />
       </Flex>
     </ModalLayout>
