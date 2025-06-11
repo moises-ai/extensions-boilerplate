@@ -7,7 +7,7 @@ A starter template for building Moises Extensions using Next.js and Moises Desig
 You can create a new project based on this boilerplate using:
 
 ```bash
-npm create @moises.ai/extensionn
+npm create @moises.ai/extension [extension-name]
 ```
 
 Or clone and install manually:
@@ -63,7 +63,7 @@ export default function YourExtension() {
 }
 ```
 
-3. Check the example extension at `src/app/example-extension/` for more implementation details.
+3. Check the examples extension at `src/app/clone-track/` and `src/app/ui-kitchen-sink` for more implementation details.
 
 ## Moises Design System
 
