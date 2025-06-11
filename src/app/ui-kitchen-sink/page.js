@@ -36,7 +36,7 @@ export default function Page() {
     });
 
     // Add extension to the toolbar
-    moises.link.tollbarButton({ label: "Kitchen Sink", icon: "UserIcon" }, async () => {
+    moises.link.toolbarButton({ label: "Kitchen Sink", icon: "UserIcon" }, async () => {
       moises.ui.confirm({
         title: "Kitchen Sink",
         description: "Open the kitchen sink",
