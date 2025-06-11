@@ -34,7 +34,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `src/app/page.js`. The page auto-updates as you edit the file.
 
 ## Creating Moises Extensions
 
@@ -84,14 +83,3 @@ This boilerplate includes the Moises Design System. To learn more about availabl
 To learn more about Moises Extensions, capabilities, and integration guides:
 
 - [Moises Extensions Documentation](https://extensions.moises.ai/)
-
-## Deployment
-
-You can deploy your extension as a standalone application or integrate it with the Moises platform.
-
-For standalone deployment, follow Next.js deployment guides:
-- [Next.js Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying)
-
-## License
-
-MIT
