@@ -2,18 +2,12 @@
 
 A starter template for building Moises Extensions using Next.js and Moises Design System.
 
-## Features
-
-- Built with [Next.js](https://nextjs.org) for a modern React framework
-- Integrated [Moises Design System](https://design-system.moises.ai/?path=/docs/introduction--docs) components
-- Optimized for quick development and easy customization
-
 ## Quick Start
 
 You can create a new project based on this boilerplate using:
 
 ```bash
-npx @moises.ai/extension my-extension
+npm create @moises.ai/extensionn
 ```
 
 Or clone and install manually:
@@ -54,7 +48,6 @@ const useMoisesExtension = initMoisesExtension({
   id: 'your-extension-id',
   name: 'Your Extension Name',
   description: 'Description of your extension',
-  icon: '🔌', // Emoji or icon for your extension
   author: 'Your Name',
   version: '1.0.0',
 });
